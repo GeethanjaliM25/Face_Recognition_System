@@ -15,7 +15,7 @@ A **web-based Face Recognition System** built using **Streamlit** that detects a
 
 This system uses **pre-trained face encodings** and applies **Euclidean distance-based matching with strict thresholding** to ensure accurate recognition and avoid false positives.
 
----
+--
 
 ## ✨ Features
 
