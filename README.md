@@ -2,54 +2,54 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
-![OpenCV] (https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv)
 ![Face Recognition](https://img.shields.io/badge/Face--Recognition-AI-orange)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 
-## 📌 Overview
+# 📌 Overview
 
-A **web-based Face Recognition System** built using **Streamlit** that detects and identifies faces in images and live webcam feed.
+A **web-based Face Recognition System** built using **Streamlit**, **OpenCV**, and the `face_recognition` library that detects and identifies faces from uploaded images and live webcam feeds.
 
-This system uses **pre-trained face encodings** and applies **Euclidean distance-based matching with strict thresholding** to ensure accurate recognition and avoid false positives.
-
---
-
-## ✨ Features
-
-* 👤 Face Detection & Recognition
-* 📤 Image Upload Support
-* 🎥 Live Webcam Detection
-* 🟩 Bounding Box Visualization
-* 📊 Confidence Score Display
-* ❌ Unknown Face Detection (Strict Thresholding)
-* ⚡ Fast and Interactive UI using Streamlit
+The system uses **pre-trained face encodings** with **Euclidean distance-based matching** and strict thresholding to improve accuracy and reduce false positives.
 
 ---
 
-## 🧠 How It Works
+# ✨ Features
 
-1. **Face Detection**
-   Detects faces using `face_recognition` library.
-
-2. **Face Encoding**
-   Converts faces into 128-dimensional vectors.
-
-3. **Face Matching**
-   Compares input face with trained faces using **Euclidean distance**.
-
-4. **Thresholding**
-
-   * If distance < threshold → Known Person
-   * Else → Unknown
+- 👤 Face Detection & Recognition
+- 📤 Image Upload Support
+- 🎥 Live Webcam Detection
+- 🟩 Bounding Box Visualization
+- 📊 Confidence Score Display
+- ❌ Unknown Face Detection
+- ⚡ Fast & Interactive Streamlit UI
 
 ---
 
-## 🏗️ Project Structure
+# 🧠 How It Works
 
-```
+## 1️⃣ Face Detection
+Faces are detected using the `face_recognition` library.
+
+## 2️⃣ Face Encoding
+Each detected face is converted into a **128-dimensional embedding vector**.
+
+## 3️⃣ Face Matching
+The input face encoding is compared with stored face encodings using **Euclidean distance**.
+
+## 4️⃣ Thresholding
+
+- If distance `< threshold` → Known Person
+- Else → Unknown Person
+
+---
+
+# 🏗️ Project Structure
+
+```bash
 face_recognition_pretrained/
 │── app.py
 │── train_model.py
@@ -73,32 +73,32 @@ face_recognition_pretrained/
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation
 
-### 1️⃣ Clone Repository
+## 1️⃣ Clone Repository
 
 ```bash
-git clone <your-repo-link>
+git clone <your-repository-link>
 cd face_recognition_pretrained
 ```
 
 ---
 
-### 2️⃣ Create Virtual Environment
+## 2️⃣ Create Virtual Environment
 
 ```bash
 python -m venv venv_py39
 ```
 
-Activate:
+### Activate Environment
 
 ```bash
-venv_py39\Scripts\activate   # Windows
+venv_py39\Scripts\activate
 ```
 
 ---
 
-### 3️⃣ Install Dependencies
+## 3️⃣ Install Dependencies
 
 ```bash
 pip install dlib-bin
@@ -109,31 +109,31 @@ pip install streamlit opencv-python numpy pandas pillow
 
 ---
 
-## 🧠 Train Model
+# 🧠 Train the Model
 
-1. Add images to dataset:
+## Add Images to Dataset
 
-```
+```bash
 dataset/
    ├── Geethanjali/
    ├── Punya/
 ```
 
-2. Run training:
+## Run Training Script
 
 ```bash
 python train_model.py
 ```
 
-👉 This generates:
+This generates:
 
-```
+```bash
 face_recognizer_XXXXXXXX.pkl
 ```
 
 ---
 
-## ▶️ Run Application
+# ▶️ Run the Application
 
 ```bash
 python -m streamlit run app.py
@@ -141,78 +141,78 @@ python -m streamlit run app.py
 
 Open in browser:
 
-```
+```bash
 http://localhost:8501
 ```
 
 ---
 
-## 🎯 Usage
+# 🎯 Usage
 
-### 📤 Image Mode
+## 📤 Image Mode
 
-* Upload an image
-* System detects and recognizes faces
+- Upload an image
+- System detects and recognizes faces automatically
 
-### 🎥 Webcam Mode
+## 🎥 Webcam Mode
 
-* Start webcam
-* Real-time face recognition
+- Start webcam
+- Real-time face recognition begins
 
 ---
 
-## ⚙️ Configuration
+# ⚙️ Configuration
 
 ```python
 THRESHOLD = 0.35
 MIN_CONFIDENCE = 60
 ```
 
-* Lower threshold → more strict
-* Prevents false matches
+- Lower threshold → More strict recognition
+- Helps reduce false matches
 
 ---
 
-## 🚀 Future Enhancements
+# 🚀 Future Enhancements
 
-* 📸 Save unknown faces automatically
-* 🧾 Attendance system
-* 🗄️ Database integration
-* 📊 Analytics dashboard
-* ☁️ Deployment on cloud
-
----
-
-## 📌 Technologies Used
-
-* Python
-* Streamlit
-* OpenCV
-* face_recognition
-* NumPy
-* Pillow
+- 📸 Save unknown faces automatically
+- 🧾 Attendance Management System
+- 🗄️ Database Integration
+- 📊 Analytics Dashboard
+- ☁️ Cloud Deployment
 
 ---
 
-## 👩‍💻 Author
+# 📌 Technologies Used
 
-**Geethanjali M**
+- Python
+- Streamlit
+- OpenCV
+- face_recognition
+- NumPy
+- Pillow
+
+---
+
+# 👩‍💻 Author
+
+**Geethanjali M**  
 B.E Student | AI & ML Enthusiast
 
 ---
 
-## 📄 License
+# 📄 License
 
 This project is licensed under the **MIT License**.
 
 ---
 
-## ⭐ Support
+# ⭐ Support
 
 If you like this project:
 
-* ⭐ Star the repository
-* 🍴 Fork it
-* 📢 Share it
+- ⭐ Star the repository
+- 🍴 Fork it
+- 📢 Share it
 
 ---
