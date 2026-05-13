@@ -17,7 +17,7 @@ The system uses **pre-trained face encodings** with **Euclidean distance-based m
 
 ---
 
-# ✨ Features
+# ✨ Features 
 
 - 👤 Face Detection & Recognition
 - 📤 Image Upload Support
