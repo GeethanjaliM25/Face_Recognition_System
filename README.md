@@ -25,7 +25,7 @@ The system uses **pre-trained face encodings** with **Euclidean distance-based m
 - 🟩 Bounding Box Visualization
 - 📊 Confidence Score Display
 - ❌ Unknown Face Detection
-- ⚡ Fast & Interactive Streamlit UI
+- ⚡ Fast & Interactive Streamlit UI.
 
 ---
 
