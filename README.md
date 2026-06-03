@@ -14,7 +14,7 @@
 A **web-based Face Recognition System** built using **Streamlit**, **OpenCV**, and the `face_recognition` library that detects and identifies faces from uploaded images and live webcam feeds.
 
 
-The system uses **pre-trained face encodings** with **Euclidean distance-based matching** and strict thresholding to improve accuracy and reduce false positives..
+The system uses **pre-trained face encodings** with **Euclidean distance-based matching** and strict thresholding to improve accuracy and reduce false positives
 
 ---
 
